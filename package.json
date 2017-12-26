@@ -1,0 +1,24 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Fuck!!!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bbalconi/demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbalconi/demo/issues"
+  },
+  "homepage": "https://github.com/bbalconi/demo#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "webpack": "^3.10.0"
+  }
+}
