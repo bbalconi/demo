@@ -1,8 +1,7 @@
-'use strict';
 
 // tag::vars[]
 import React from 'react';
-const ReactDOM = require('react-dom');
+import { AppRegistry, Image, StyleSheet, Text, View } from 'react-native'
 const axios = require('axios');
 // end::vars[]
 
@@ -25,11 +24,7 @@ class App extends React.Component {
 		)
 	}
 }
-// end::employee[]
 
-// tag::render[]
-ReactDOM.render(
-	<App />,
-	document.getElementById('react')
-)
-// end::render[]
+if (window.document) {
+AppRegistry.runApplication('demo', { rootTag: document.getElementById('react') })
+}
