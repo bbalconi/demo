@@ -1,12 +1,16 @@
 
 // tag::vars[]
 import React from 'react';
+import ReactNative from 'react-native';
 import { AppRegistry, Image, StyleSheet, Text, View } from 'react-native'
+import { Provider } from 'mobx-react/native'
 const axios = require('axios');
-// end::vars[]
 
-// tag::app[]
-class App extends React.Component {
+const DemoApp = DrawerNavigator({
+  Home: { screen: Main  }
+})
+
+export default class App extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -20,11 +24,15 @@ class App extends React.Component {
 
 	render() {
 		return (
-      <div>shit</div>
+      <Provider>
+
+      </Provider>
 		)
 	}
 }
 
+AppRegistry.registerComponent("Demo", () => App);
+
 if (window.document) {
-AppRegistry.runApplication('demo', { rootTag: document.getElementById('react') })
+AppRegistry.runApplication('Demo', { rootTag: document.getElementById('react') })
 }
