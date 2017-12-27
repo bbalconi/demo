@@ -10295,13 +10295,18 @@ module.exports = Cancel;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _react = __webpack_require__(89);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var React = __webpack_require__(89);
 var ReactDOM = __webpack_require__(105);
 var axios = __webpack_require__(191);
 // end::vars[]
@@ -10314,10 +10319,7 @@ var App = function (_React$Component) {
 	function App(props) {
 		_classCallCheck(this, App);
 
-		var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-		_this.state = { employees: [] };
-		return _this;
+		return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	}
 
 	_createClass(App, [{
@@ -10330,112 +10332,22 @@ var App = function (_React$Component) {
 	}, {
 		key: 'render',
 		value: function render() {
-			return React.createElement(EmployeeList, { employees: this.state.employees });
+			return _react2.default.createElement(
+				'div',
+				null,
+				'fuck'
+			);
 		}
 	}]);
 
 	return App;
-}(React.Component);
-// end::app[]
-
-// tag::employee-list[]
-
-
-var EmployeeList = function (_React$Component2) {
-	_inherits(EmployeeList, _React$Component2);
-
-	function EmployeeList() {
-		_classCallCheck(this, EmployeeList);
-
-		return _possibleConstructorReturn(this, (EmployeeList.__proto__ || Object.getPrototypeOf(EmployeeList)).apply(this, arguments));
-	}
-
-	_createClass(EmployeeList, [{
-		key: 'render',
-		value: function render() {
-			var employees = this.props.employees.map(function (employee) {
-				return React.createElement(Employee, { key: employee._links.self.href, employee: employee });
-			});
-			return React.createElement(
-				'table',
-				null,
-				React.createElement(
-					'tbody',
-					null,
-					React.createElement(
-						'tr',
-						null,
-						React.createElement(
-							'th',
-							null,
-							'First Name'
-						),
-						React.createElement(
-							'th',
-							null,
-							'Last Name'
-						),
-						React.createElement(
-							'th',
-							null,
-							'Description'
-						)
-					),
-					employees
-				)
-			);
-		}
-	}]);
-
-	return EmployeeList;
-}(React.Component);
-// end::employee-list[]
-
-// tag::employee[]
-
-
-var Employee = function (_React$Component3) {
-	_inherits(Employee, _React$Component3);
-
-	function Employee() {
-		_classCallCheck(this, Employee);
-
-		return _possibleConstructorReturn(this, (Employee.__proto__ || Object.getPrototypeOf(Employee)).apply(this, arguments));
-	}
-
-	_createClass(Employee, [{
-		key: 'render',
-		value: function render() {
-			return React.createElement(
-				'tr',
-				null,
-				React.createElement(
-					'td',
-					null,
-					this.props.employee.firstName
-				),
-				React.createElement(
-					'td',
-					null,
-					this.props.employee.lastName
-				),
-				React.createElement(
-					'td',
-					null,
-					this.props.employee.description
-				)
-			);
-		}
-	}]);
-
-	return Employee;
-}(React.Component);
+}(_react2.default.Component);
 // end::employee[]
 
 // tag::render[]
 
 
-ReactDOM.render(React.createElement(App, null), document.getElementById('react'));
+ReactDOM.render(_react2.default.createElement(App, null), document.getElementById('react'));
 // end::render[]
 
 /***/ }),
