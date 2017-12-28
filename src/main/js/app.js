@@ -1,16 +1,9 @@
 
-// tag::vars[]
 import React from 'react';
-import { AppRegistry, Image, StyleSheet, Text, View } from 'react-native'
+import ReactDOM from 'react-dom';
 const axios = require('axios');
-// end::vars[]
 
-// tag::app[]
 class App extends React.Component {
-
-	constructor(props) {
-		super(props);
-	}
 
 	componentDidMount() {
 		axios.get('http://localhost:8080/api/employees').then((res) => {
@@ -25,6 +18,5 @@ class App extends React.Component {
 	}
 }
 
-if (window.document) {
-AppRegistry.runApplication('demo', { rootTag: document.getElementById('react') })
-}
+ReactDOM.render(<App />, document.getElementById('react'));
+
