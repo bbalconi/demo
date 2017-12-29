@@ -17,6 +17,7 @@ export default class Navbar extends Component {
 
 const Navvy = styled.ul`    
   list-style-type: none;
+  z-index:1;
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -24,7 +25,7 @@ const Navvy = styled.ul`
   text-align: center;
   position: fixed;
   top: 0;
-  width: 98%;
+  width: 100%;
 `;
 
 const ListItem = styled.li`
@@ -37,6 +38,7 @@ const ListItem = styled.li`
   ${props => props.right && css`
   float: right;
   display: inline;
+  margin-right: 30px;
   `}
 
   ${props => props.center && css`
