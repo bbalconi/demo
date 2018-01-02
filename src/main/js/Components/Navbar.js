@@ -33,16 +33,19 @@ const ListItem = styled.li`
 
   ${props => props.left && css`
   float: left;
+  cursor: default;
   `}
 
   ${props => props.right && css`
   float: right;
   display: inline;
   margin-right: 30px;
+  cursor: default;
   `}
 
   ${props => props.center && css`
   text-align: center;
   color: red;
   display: inline;
+  cursor: default;
 `}`;

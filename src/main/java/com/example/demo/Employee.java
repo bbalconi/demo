@@ -13,13 +13,13 @@ public class Employee {
   private @Id @GeneratedValue Long id;
   private String firstName;
   private String lastName;
-  private String identity;
+  private String description;
 
   private Employee() {}
 
-  public Employee(String firstName, String lastName, String identity) {
+  public Employee(String firstName, String lastName, String description) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.identity = identity;
+    this.description = description;
   }
 }

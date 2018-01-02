@@ -8,16 +8,14 @@ import {
 import UserStore from "./Stores/UserStore";
 import Navbar from './Components/Navbar';
 import Home from './Components/Home';
+import Rest from './Components/Rest';
 
 import { Provider } from "mobx-react"
 const axios = require('axios');
 
 export default class App extends React.Component {
-
-  componentDidMount() {
-    axios.get('http://localhost:8080/api/employees').then((res) => {
-      console.log(res)
-    })
+  constructor(){
+    super()
   }
 
   render() {
@@ -28,6 +26,7 @@ export default class App extends React.Component {
             <Navbar />
             <div style={{ flex: 1 }}>
               <Route exact path='/' render={() => <Home />} />
+              <Route path='/rest' render={() => <Rest />} />
             </div>
           </div>
         </Router>

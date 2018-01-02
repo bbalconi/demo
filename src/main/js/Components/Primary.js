@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
 import styled, { css } from 'styled-components';
+import { withRouter } from 'react-router-dom';
 
-export default class Primary extends Component {
+class Primary extends Component {
+  constructor(){
+    super()
+    this.clickHandler = this.clickHandler.bind(this)
+  }
+
+  clickHandler(){
+    this.props.history.push("/rest");
+  }
   render() {
     return (
       <Box>
         <Title>BRIAN BALCONI</Title>
         <SubTitle>Not on tour. On sale now!</SubTitle>
-        <TicketButton>GET TICKETS</TicketButton>
+        <TicketButton onClick={this.clickHandler}>GET TICKETS</TicketButton>
       </Box>
     );
   }
 }
+
+export default withRouter(Primary);
 
 const Box = styled.section`
   background-image: url('/images/hah.jpg');
@@ -61,3 +72,4 @@ const Box = styled.section`
   font-size: 1.25em;
   border: 2px solid #E3184F;
   `
+

@@ -8,9 +8,13 @@ import SoHot from './SoHot';
 import WhySellOut from './WhySellOut';
 import Footer from './Footer';
 import InstaPics from './InstaPics';
+import { withRouter } from 'react-router-dom';
 
 
-export default class Home extends Component {
+class Home extends Component {
+  constructor(){
+    super()
+  }
   render() {
     return (
       <div>
@@ -41,6 +45,8 @@ export default class Home extends Component {
     );
   }
 }
+
+export default withRouter(Home);
 
 const SubTitle = styled.h1`
   padding-top: 30px;
