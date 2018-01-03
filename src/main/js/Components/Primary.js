@@ -11,6 +11,7 @@ class Primary extends Component {
   clickHandler(){
     this.props.history.push("/rest");
   }
+  
   render() {
     return (
       <Box>

@@ -9,7 +9,6 @@ export default class UserStore {
      data: []
    });
    axios.get('/api/employees').then((res) => {
-     console.log('userStore rendered')
      this.data = res.data._embedded.employees
    })
  }

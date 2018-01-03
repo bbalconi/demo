@@ -44374,8 +44374,8 @@ var Rest = (0, _mobxReact.observer)(function (_Component) {
       var _this3 = this;
 
       var array = this.props.userStore.data;
-      var renderArray = array.map(function (item) {
-        return _react2.default.createElement(_Employee2.default, { item: item });
+      var renderArray = array.map(function (item, i) {
+        return _react2.default.createElement(_Employee2.default, { key: i, item: item });
       });
       return _react2.default.createElement(
         Div,
@@ -44406,22 +44406,26 @@ var Rest = (0, _mobxReact.observer)(function (_Component) {
           'table',
           null,
           _react2.default.createElement(
-            'tr',
+            'thead',
             null,
             _react2.default.createElement(
-              'th',
+              'tr',
               null,
-              'First Name'
-            ),
-            _react2.default.createElement(
-              'th',
-              null,
-              'Last Name'
-            ),
-            _react2.default.createElement(
-              'th',
-              null,
-              'Description'
+              _react2.default.createElement(
+                'th',
+                null,
+                'First Name'
+              ),
+              _react2.default.createElement(
+                'th',
+                null,
+                'Last Name'
+              ),
+              _react2.default.createElement(
+                'th',
+                null,
+                'Description'
+              )
             )
           ),
           _react2.default.createElement(

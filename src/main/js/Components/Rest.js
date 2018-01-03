@@ -45,9 +45,9 @@ var Rest = observer(class Rest extends Component {
 
   render() {
     let array = this.props.userStore.data;
-    let renderArray = array.map((item) => {
+    let renderArray = array.map((item, i) => {
       return (
-        <Employee item={item}/>
+        <Employee key={i} item={item}/>
       )
     })
     return (
@@ -69,8 +69,8 @@ var Rest = observer(class Rest extends Component {
           value={this.state.identity}
         />
         <button onClick={() => this.postFunction(this.state.firstName, this.state.lastName, this.state.identity)}>Post Data</button>
-        <table>
-        <tr><th>First Name</th><th>Last Name</th><th>Description</th></tr>
+        <table><thead>
+        <tr><th>First Name</th><th>Last Name</th><th>Description</th></tr></thead>
         <tbody>{renderArray}</tbody>
         </table>
       </Div>
